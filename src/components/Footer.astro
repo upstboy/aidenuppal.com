@@ -1,0 +1,30 @@
+---
+import { SITE } from '../config';
+const year = new Date().getFullYear();
+const links = [
+  { href: SITE.social.github, label: 'GitHub' },
+  { href: SITE.social.linkedin, label: 'LinkedIn' },
+  { href: SITE.social.youtube, label: 'YouTube' },
+  { href: SITE.social.email, label: 'Email' },
+].filter((l) => l.href);
+---
+
+<footer class="border-t border-zinc-200 dark:border-zinc-800">
+  <div class="mx-auto flex w-full max-w-6xl flex-col gap-3 px-4 py-8 text-sm text-zinc-500 sm:flex-row sm:items-center sm:justify-between sm:px-6 lg:px-8 dark:text-zinc-400">
+    <p>© {year} {SITE.author}</p>
+    <ul class="flex flex-wrap gap-x-5 gap-y-2">
+      {links.map((l) => (
+        <li>
+          <a
+            href={l.href}
+            rel="me noopener"
+            target={l.href.startsWith('mailto:') ? undefined : '_blank'}
+            class="hover:text-zinc-900 dark:hover:text-white"
+          >
+            {l.label}
+          </a>
+        </li>
+      ))}
+    </ul>
+  </div>
+</footer>

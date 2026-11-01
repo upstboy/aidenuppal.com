@@ -1,0 +1,35 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { formatDate } from '../lib/content';
+import Tag from './Tag.astro';
+
+interface Props {
+  post: CollectionEntry<'blog'>;
+  showYear?: boolean;
+}
+const { post, showYear = true } = Astro.props;
+const { title, summary, date, tags } = post.data;
+---
+
+<article class="grid gap-2 py-5 sm:grid-cols-[7rem_1fr] sm:gap-6">
+  <time datetime={date.toISOString()} class="text-sm text-zinc-500 sm:pt-0.5 dark:text-zinc-400">
+    {formatDate(date, showYear ? undefined : { month: 'short', day: 'numeric' })}
+  </time>
+  <div class="min-w-0">
+    <h3 class="text-lg font-semibold leading-snug tracking-tight">
+      <a href={`/blog/${post.id}/`} class="hover:text-accent-strong dark:hover:text-accent">{title}</a>
+    </h3>
+    <p class="mt-1 text-sm leading-relaxed text-zinc-600 dark:text-zinc-400">{summary}</p>
+    {
+      tags.length > 0 && (
+        <ul class="mt-2 flex flex-wrap gap-1.5">
+          {tags.map((t) => (
+            <li>
+              <Tag tag={t} />
+            </li>
+          ))}
+        </ul>
+      )
+    }
+  </div>
+</article>

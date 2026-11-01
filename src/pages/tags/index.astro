@@ -1,0 +1,26 @@
+---
+import Base from '../../layouts/Base.astro';
+import Tag from '../../components/Tag.astro';
+import { getTagMap } from '../../lib/content';
+
+const tags = [...(await getTagMap()).values()]
+  .map((t) => ({ tag: t.tag, count: t.projects.length + t.posts.length }))
+  .sort((a, b) => b.count - a.count || a.tag.localeCompare(b.tag));
+---
+
+<Base title="Tags" description="Browse projects and posts by topic.">
+  <header class="mb-10">
+    <h1 class="text-3xl font-bold tracking-tight sm:text-4xl">Tags</h1>
+    <p class="mt-3 max-w-2xl text-zinc-600 dark:text-zinc-400">Every topic that has at least one project or post.</p>
+  </header>
+
+  <ul class="flex flex-wrap gap-2.5">
+    {
+      tags.map((t) => (
+        <li>
+          <Tag tag={t.tag} count={t.count} size="md" />
+        </li>
+      ))
+    }
+  </ul>
+</Base>
