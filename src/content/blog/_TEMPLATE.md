@@ -10,6 +10,7 @@ date: 2026-01-01            # publish date (YYYY-MM-DD), posts are sorted by thi
 tags: [robotics]            # free text, lowercase
 # cover: ./cover.jpg        # optional header image in the same folder
 # coverAlt: What the image shows
+# coverPosition: center 30% # optional, for tall photos
 # project: open-duck-mini   # optional, the folder name of a project to link this post to
 draft: false                # true hides it from the published site
 ---

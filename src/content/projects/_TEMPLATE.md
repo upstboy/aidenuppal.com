@@ -10,6 +10,7 @@ status: in-progress          # in-progress | done | paused
 tags: [robotics, esp32]      # free text, lowercase, reused across projects and posts
 # cover: ./cover.jpg         # optional, image in the same folder (jpg/png/webp/svg)
 # coverAlt: What the image shows
+# coverPosition: center 30%  # optional, for tall photos: which part the card crop keeps (CSS object-position)
 # repo: https://github.com/upstboy/repo-name
 # demo: https://example.com
 featured: false              # true puts it in the home page grid

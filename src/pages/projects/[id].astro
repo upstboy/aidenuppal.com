@@ -15,7 +15,7 @@ export async function getStaticPaths() {
 
 const { project } = Astro.props;
 const { Content } = await render(project);
-const { title, summary, date, updated, status, tags, cover, coverAlt, repo, demo } = project.data;
+const { title, summary, date, updated, status, tags, cover, coverAlt, coverPosition, repo, demo } = project.data;
 const relatedPosts = (await getPosts()).filter((p) => p.data.project?.id === project.id);
 ---
 
@@ -83,6 +83,7 @@ const relatedPosts = (await getPosts()).filter((p) => p.data.project?.id === pro
           src={cover}
           alt={coverAlt ?? title}
           class="mt-8 aspect-[16/9] w-full rounded-2xl border border-zinc-200 object-cover dark:border-zinc-800"
+          style={coverPosition ? `object-position: ${coverPosition}` : undefined}
           loading="eager"
         />
       )

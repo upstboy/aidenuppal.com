@@ -8,7 +8,7 @@ interface Props {
   project: CollectionEntry<'projects'>;
 }
 const { project } = Astro.props;
-const { title, summary, cover, coverAlt, tags, status } = project.data;
+const { title, summary, cover, coverAlt, coverPosition, tags, status } = project.data;
 ---
 
 <article
@@ -21,6 +21,7 @@ const { title, summary, cover, coverAlt, tags, status } = project.data;
           src={cover}
           alt={coverAlt ?? title}
           class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-[1.03]"
+          style={coverPosition ? `object-position: ${coverPosition}` : undefined}
           loading="lazy"
         />
       ) : (

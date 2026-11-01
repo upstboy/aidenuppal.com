@@ -15,7 +15,7 @@ export async function getStaticPaths() {
 
 const { post, newer, older } = Astro.props;
 const { Content } = await render(post);
-const { title, summary, date, updated, tags, cover, coverAlt } = post.data;
+const { title, summary, date, updated, tags, cover, coverAlt, coverPosition } = post.data;
 const project = post.data.project ? await getEntry(post.data.project) : undefined;
 ---
 
@@ -62,6 +62,7 @@ const project = post.data.project ? await getEntry(post.data.project) : undefine
           src={cover}
           alt={coverAlt ?? title}
           class="mt-8 aspect-[16/9] w-full rounded-2xl border border-zinc-200 object-cover dark:border-zinc-800"
+          style={coverPosition ? `object-position: ${coverPosition}` : undefined}
           loading="eager"
         />
       )

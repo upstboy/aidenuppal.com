@@ -4,8 +4,9 @@ summary: A small open-source bipedal walking robot running on a Raspberry Pi Zer
 date: 2026-09-01 # TODO: when you started
 status: in-progress
 tags: [robotics, raspberry-pi, 3d-printing]
-cover: ./cover.svg # TODO: replace with a real photo, e.g. ./cover.jpg
-coverAlt: Placeholder cover for the Open Duck Mini project
+cover: ./OpenDuckMini.jpg
+coverAlt: The Open Duck Mini robot standing on a desk, head tilted
+coverPosition: center 30% # which part of the tall photo the landscape crop keeps
 repo: https://github.com/upstboy # TODO: link to your fork or the project repo
 featured: true
 ---

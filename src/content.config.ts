@@ -16,6 +16,7 @@ const projects = defineCollection({
       tags: z.array(z.string()).default([]),
       cover: image().optional(), // relative path to an image next to the .md file
       coverAlt: z.string().optional(),
+      coverPosition: z.string().optional(), // CSS object-position, e.g. 'center 30%' to keep the top of a tall photo
       repo: z.string().url().optional(),
       demo: z.string().url().optional(),
       featured: z.boolean().default(false), // show on the home page
@@ -34,6 +35,7 @@ const blog = defineCollection({
       tags: z.array(z.string()).default([]),
       cover: image().optional(),
       coverAlt: z.string().optional(),
+      coverPosition: z.string().optional(),
       project: reference('projects').optional(), // links the post to a project page
       draft: z.boolean().default(false),
     }),
