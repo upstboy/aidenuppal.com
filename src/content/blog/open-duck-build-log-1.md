@@ -1,6 +1,6 @@
 ---
 title: "Open Duck build log 1: getting the Pi talking"
-summary: Flashing the Pi Zero 2 W, getting SSH working without a monitor, and installing the runtime. # TODO
+summary: Test. # TODO
 date: 2026-10-03
 tags: [robotics, raspberry-pi, open-duck]
 project: open-duck-mini # links this post to the project page
