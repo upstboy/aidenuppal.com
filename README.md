@@ -39,7 +39,8 @@ Ignored by the build. That is how the `_TEMPLATE.md` files stay unpublished.
 
 Search the repo for `TODO`. The main ones:
 
-- `src/config.ts`: tagline, description, email and social links.
+- `src/config.ts`: hero text, description, email and social links.
+- `src/pages/about.astro`: the About page text and a photo (see the TODO comments at the top of the file).
 - `src/content/projects/open-duck-mini/`: the real writeup and a cover photo.
 - `src/content/projects/example-project/`: delete once you have a second real project.
 - `src/content/blog/*.md`: the two placeholder posts.
@@ -50,7 +51,7 @@ Search the repo for `TODO`. The main ones:
 
 ```
 src/
-  config.ts            site title, tagline, social links
+  config.ts            site title, hero text, social links
   content.config.ts    the frontmatter schema for projects and posts (build fails on typos)
   content/
     projects/<slug>/   one folder per project, index.md plus images

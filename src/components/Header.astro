@@ -5,7 +5,8 @@ import ThemeToggle from './ThemeToggle.astro';
 const links = [
   { href: '/projects/', label: 'Projects' },
   { href: '/blog/', label: 'Blog' },
-  { href: '/tags/', label: 'Tags' },
+  { href: '/about/', label: 'About' },
+  { href: '/tags/', label: 'Tags', hideOnMobile: true },
 ];
 const path = Astro.url.pathname;
 const isActive = (href: string) => path === href || path.startsWith(href);
@@ -25,6 +26,7 @@ const isActive = (href: string) => path === href || path.startsWith(href);
           aria-current={isActive(l.href) ? 'page' : undefined}
           class:list={[
             'rounded-md px-2.5 py-1.5 transition-colors hover:bg-zinc-100 dark:hover:bg-zinc-800',
+            l.hideOnMobile && 'hidden sm:inline-block',
             isActive(l.href) ? 'font-medium text-zinc-900 dark:text-white' : 'text-zinc-600 dark:text-zinc-400',
           ]}
         >

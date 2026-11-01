@@ -1,0 +1,119 @@
+---
+import Base from '../layouts/Base.astro';
+import { SITE } from '../config';
+import { getProjects } from '../lib/content';
+
+// TODO: Swap the placeholder avatar for a real photo.
+// Drop a square image at src/assets/me.jpg, then uncomment the two lines below
+// and the <Image> block further down, and delete the initials <div>.
+// import { Image } from 'astro:assets';
+// import me from '../assets/me.jpg';
+
+const initials = SITE.author
+  .split(' ')
+  .map((w) => w[0])
+  .join('');
+
+const current = (await getProjects()).filter((p) => p.data.status === 'in-progress').slice(0, 3);
+
+const links = [
+  { href: SITE.social.github, label: 'GitHub' },
+  { href: SITE.social.linkedin, label: 'LinkedIn' },
+  { href: SITE.social.youtube, label: 'YouTube' },
+  { href: SITE.social.email, label: 'Email' },
+].filter((l) => l.href);
+---
+
+<Base title="About" description={`A bit about ${SITE.author}.`}>
+  <div class="mx-auto grid max-w-4xl gap-10 md:grid-cols-[14rem_1fr] md:gap-14">
+    <aside class="flex flex-col items-start gap-5">
+      <!-- Placeholder avatar. Replace with the <Image> below once you have a photo. -->
+      <div
+        class="grid size-40 place-items-center rounded-2xl bg-gradient-to-br from-accent/40 via-accent/15 to-transparent text-4xl font-bold text-zinc-700 ring-1 ring-zinc-200 dark:text-zinc-200 dark:ring-zinc-800 md:size-48"
+        aria-hidden="true"
+      >
+        {initials}
+      </div>
+      <!--
+      <Image src={me} alt={SITE.author} width={384} height={384} class="size-40 rounded-2xl object-cover ring-1 ring-zinc-200 dark:ring-zinc-800 md:size-48" />
+      -->
+
+      <div>
+        <h1 class="text-2xl font-bold tracking-tight">{SITE.author}</h1>
+        <!-- TODO: where you are / what you do, in a few words -->
+        <p class="mt-1 text-sm text-zinc-500 dark:text-zinc-400">Robotics and embedded systems</p>
+      </div>
+
+      {
+        links.length > 0 && (
+          <ul class="flex flex-col gap-1.5 text-sm">
+            {links.map((l) => (
+              <li>
+                <a
+                  href={l.href}
+                  rel="me noopener"
+                  target={l.href.startsWith('mailto:') ? undefined : '_blank'}
+                  class="text-zinc-600 hover:text-accent-strong dark:text-zinc-400 dark:hover:text-accent"
+                >
+                  {l.label} ↗
+                </a>
+              </li>
+            ))}
+          </ul>
+        )
+      }
+    </aside>
+
+    <div class="prose prose-zinc max-w-none dark:prose-invert prose-headings:tracking-tight prose-a:text-accent-strong dark:prose-a:text-accent">
+      <!-- TODO: Everything in this column is placeholder. Write it in your own voice, first person, like you are telling a friend. -->
+
+      <p class="lead">
+        Hi. I'm Aiden. I build small robots and tinker with microcontrollers, and this site is where I keep track of all of it.
+      </p>
+
+      <h2>What I'm into</h2>
+      <p>
+        A couple of short paragraphs about what you actually spend your time on. What got you into robotics, what kind of problems you enjoy, what you are
+        trying to get better at. Specific beats general: one real story about a thing that went wrong is more interesting than a list of skills.
+      </p>
+
+      <h2>Background</h2>
+      <p>
+        Where you are studying or working, anything relevant you have done before, and what you are aiming for next. Keep it to the parts that matter
+        to someone reading a projects site.
+      </p>
+
+      {
+        current.length > 0 && (
+          <>
+            <h2>Currently working on</h2>
+            <ul>
+              {current.map((p) => (
+                <li>
+                  <a href={`/projects/${p.id}/`}>{p.data.title}</a> — {p.data.summary}
+                </li>
+              ))}
+            </ul>
+          </>
+        )
+      }
+
+      <h2>Outside of this</h2>
+      <p>
+        Optional. Hobbies, music, sports, whatever rounds you out. Delete the section if you would rather keep the site strictly about the work.
+      </p>
+
+      <h2>Get in touch</h2>
+      <p>
+        If you want to talk about any of the projects here, or you are working on something similar, email is the best way to reach me. Links are on
+        the left.
+      </p>
+
+      <h2>About this site</h2>
+      <p>
+        Built with <a href="https://astro.build" target="_blank" rel="noopener">Astro</a>, hosted on GitHub Pages. Every post and project is a Markdown
+        file in <a href={SITE.social.github + '/aidenuppal.com'} target="_blank" rel="noopener">a public repo</a>.
+      </p>
+    </div>
+  </div>
+</Base>
