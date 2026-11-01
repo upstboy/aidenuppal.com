@@ -4,21 +4,34 @@ summary: Adjustable 3D-Printed socks with a rubber base that slide onto table le
 date: 2026-10-31 # TODO: when you started
 status: done # in-progress | done | paused
 tags: [3d-printing, mechanical, product-design]
-# cover: ./cover.jpg # TODO: add a photo to this folder and uncomment
-# coverAlt: What the photo shows
+cover: ./BackView.jpg
+coverAlt: A black 3D-printed sock fitted over the corner of an L-shaped steel table leg, seen from behind
+coverPosition: center 60%
 # repo: https://github.com/upstboy/your-repo
 featured: false
 ---
-
-<!-- TODO: Placeholder structure. Replace each section with your own words. -->
 
 ## Overview
 
 The Little Giant table I bought would rock on my uneven garage floor, and using metal spacers would lead to metal-on-metal contact which could slip easily. I designed 3D-Printable "socks" that could slide onto the L-shaped table legs easily to level the table.
 
+## In action
+
+<video autoplay loop muted playsinline preload="metadata" poster="/videos/table-leveling-socks-poster.jpg" class="w-full rounded-xl border border-zinc-200 dark:border-zinc-800" aria-label="Sliding a leveling spacer into the sock on a table leg">
+  <source src="/videos/table-leveling-socks.mp4" type="video/mp4" />
+</video>
+
 ## How it works
 
-The sock needs to reduce friction and also add easy leveling access. To reduce friction a small TPU insert can be added for better grip. The insert was printed at 100% infill to reduce compression. An opening was created in the side of the sock so that L-shaped inserts can be added to level different legs of the table easily. 
+The sock needs to reduce friction and also add easy leveling access. To reduce friction a small TPU insert can be added for better grip. The insert was printed at 100% infill to reduce compression. An opening was created in the side of the sock so that L-shaped inserts can be added to level different legs of the table easily.
+
+<div class="grid gap-4 sm:grid-cols-2 sm:items-start">
+
+![Back of the sock on the leg, showing the opening for leveling spacers](./BackView.jpg)
+
+![Front of the sock on the leg, showing the TPU grip insert at the base](./FrontView.jpg)
+
+</div>
 
 ## Design and prototyping
 
