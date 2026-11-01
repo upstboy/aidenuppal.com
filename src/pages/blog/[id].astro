@@ -35,10 +35,13 @@ const project = post.data.project ? await getEntry(post.data.project) : undefine
         project && (
           <a
             href={`/projects/${project.id}/`}
-            class="mt-5 inline-flex items-center gap-2 rounded-lg border border-zinc-200 bg-zinc-50 px-3 py-1.5 text-sm transition-colors hover:border-accent hover:bg-accent/10 dark:border-zinc-800 dark:bg-zinc-900"
+            class="group mt-5 inline-flex items-center gap-2 rounded-lg border border-zinc-200 bg-zinc-50 px-3 py-1.5 text-sm transition-colors hover:border-accent hover:bg-accent/10 dark:border-zinc-800 dark:bg-zinc-900"
           >
             <span class="text-zinc-500 dark:text-zinc-400">Part of</span>
-            <span class="font-medium">{project.data.title}</span>
+            <span class="font-medium text-accent-strong underline decoration-accent/50 underline-offset-2 group-hover:decoration-accent-strong dark:text-accent">
+              {project.data.title}
+            </span>
+            <span class="text-accent-strong transition-transform group-hover:translate-x-0.5 dark:text-accent" aria-hidden="true">→</span>
           </a>
         )
       }

@@ -15,7 +15,7 @@ featured: true
 
 ## Overview
 
-A couple of sentences on what this project is and why you started it. What drew you to the Open Duck design, and what are you hoping to get out of building one?
+The Open Duck Mini is a miniature BDX Droid. I chose to build one to learn
 
 ## Hardware
 
