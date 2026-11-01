@@ -23,7 +23,7 @@ The Little Giant table I bought would rock on my uneven garage floor, and using 
 
 ## How it works
 
-The sock needs to reduce friction and also add easy leveling access. To reduce friction a small TPU insert can be added for better grip. The insert was printed at 100% infill to reduce compression. An opening was created in the side of the sock so that L-shaped inserts can be added to level different legs of the table easily.
+The sock needs to reduce friction and also add easy leveling access. To reduce friction a small TPU insert was added for better grip. The insert was printed at 100% infill to reduce compression. An opening was created in the side of the sock so that L-shaped inserts can be added to level different legs of the table easily.
 
 <div class="grid gap-4 sm:grid-cols-2 sm:items-start">
 
