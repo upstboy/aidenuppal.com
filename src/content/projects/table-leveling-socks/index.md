@@ -1,8 +1,8 @@
 ---
 title: Table Leveling Socks
-summary: Self-adjusting feet that slip over table legs and take out the wobble on uneven floors. # TODO
-date: 2026-03-01 # TODO: when you started
-status: in-progress # in-progress | done | paused
+summary: Adjustable 3D-Printed socks with a rubber base that slide onto table legs with openings to add leveling spacers. # TODO
+date: 2026-10-31 # TODO: when you started
+status: done # in-progress | done | paused
 tags: [3d-printing, mechanical, product-design]
 # cover: ./cover.jpg # TODO: add a photo to this folder and uncomment
 # coverAlt: What the photo shows
@@ -14,23 +14,22 @@ featured: false
 
 ## Overview
 
-What the problem was and why existing fixes (folded napkins, screw-in feet) weren't good enough. What the "sock" does differently.
+The Little Giant table I bought would rock on my uneven garage floor, and using metal spacers would lead to metal-on-metal contact which could slip easily. I designed 3D-Printable "socks" that could slide onto the L-shaped table legs easily to level the table.
 
 ## How it works
 
-The mechanism. Is it passive, like a ratchet or a compliant pad that locks under load, or active? Diagrams help a lot here, even a quick sketch.
+The sock needs to reduce friction and also add easy leveling access. To reduce friction a small TPU insert can be added for better grip. The insert was printed at 100% infill to reduce compression. An opening was created in the side of the sock so that L-shaped inserts can be added to level different legs of the table easily. 
 
 ## Design and prototyping
 
-- **Material:** TODO filament or rubber, hardness, grip
-- **Fit:** TODO how it adapts to different leg sizes and shapes
-- **Iterations:** TODO what changed between versions and why
+- **Material:** Plastic sock printed in PETG-CF, rubber insert printed in TPU 95A
+- **Fit:** Specifically designed to fit on the Little Giant MT1
+- **Iterations:** No problems found yet, if something changes will update with a new iteration.
 
 ## Testing
 
-How you checked it actually works. Which tables, which floors, how much wobble it removes.
+Without any socks table was rocking ~1/8", after adding socks on all four tables and adding 1/8" spacers to two legs there was no rocking. There has not been continuous load testing yet but the spacers and socks should hold up due to being printed on a high infill.
 
 ## Status and next steps
 
-- TODO: where it stands
-- TODO: what's next
+- TODO: Update after continued testing under load
