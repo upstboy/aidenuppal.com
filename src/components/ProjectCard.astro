@@ -12,9 +12,9 @@ const { title, summary, cover, coverAlt, coverPosition, tags, status } = project
 ---
 
 <article
-  class="light group relative flex flex-col overflow-hidden rounded-2xl border-2 border-card-edge bg-zinc-200 text-zinc-900 transition-[box-shadow,border-color] hover:border-card-edge-strong hover:shadow-lg hover:shadow-card-edge/30"
+  class="light group relative flex flex-col overflow-hidden rounded-2xl border-2 border-card-edge bg-card text-zinc-900 transition-[box-shadow,border-color] hover:border-card-edge-strong hover:shadow-lg hover:shadow-card-edge/30"
 >
-  <div class="aspect-[16/10] overflow-hidden bg-zinc-300">
+  <div class="aspect-[16/10] overflow-hidden bg-card-well">
     {
       cover ? (
         <Image
@@ -41,7 +41,7 @@ const { title, summary, cover, coverAlt, coverPosition, tags, status } = project
       </h3>
       <StatusBadge status={status} />
     </div>
-    <p class="text-sm leading-relaxed text-zinc-600">{summary}</p>
+    <p class="text-sm leading-relaxed text-zinc-700">{summary}</p>
     {
       tags.length > 0 && (
         <ul class="relative z-10 mt-auto flex flex-wrap gap-1.5 pt-1">
