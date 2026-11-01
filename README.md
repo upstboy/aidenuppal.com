@@ -45,7 +45,7 @@ Search the repo for `TODO`. The main ones:
 - `src/content/projects/example-project/`: delete once you have a second real project.
 - `src/content/blog/*.md`: the two placeholder posts.
 - `public/favicon.svg`: the default Astro icon.
-- `src/styles/global.css`: the `--color-accent` value if you want a different accent colour.
+- `src/styles/global.css`: the `--color-accent` values if you want a different accent colour.
 
 ## How it is put together
 

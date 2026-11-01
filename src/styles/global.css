@@ -6,15 +6,13 @@
 @custom-variant dark (&:where(.dark, .dark *):not(:where(.light, .light *)));
 
 @theme {
-  /* TODO: pick your accent. This is a warm amber; swap the hue (third number) to taste. */
-  --color-accent: oklch(0.75 0.16 65);
-  --color-accent-strong: oklch(0.62 0.17 55);
-  /* Outline colour for project cards: a light periwinkle. */
-  --color-card-edge: oklch(0.8 0.1 280);
-  --color-card-edge-strong: oklch(0.7 0.14 280);
-  /* Project card surface and the image well behind covers. */
-  --color-card: rgb(146 176 247);
-  --color-card-well: rgb(128 158 230);
+  /* The one accent colour, used sparingly: logo dot, primary buttons, link hovers, card outlines, tag tint. */
+  --color-accent: rgb(146 176 247);          /* light blue, used on dark backgrounds and as fills */
+  --color-accent-strong: rgb(76 112 208);    /* darker blue, used for text on light backgrounds */
+  --color-accent-soft: rgb(200 214 250);     /* very light blue, tag text in dark mode */
+  /* Project card outline, derived from the accent. */
+  --color-card-edge: rgb(146 176 247 / 0.45);
+  --color-card-edge-strong: rgb(146 176 247);
   --font-sans: "Inter Variable", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   --font-mono: ui-monospace, "Cascadia Code", "JetBrains Mono", Menlo, Consolas, monospace;
 }

@@ -11,10 +11,10 @@ const { tag, count, size = 'sm' } = Astro.props;
 <a
   href={`/tags/${slugifyTag(tag)}/`}
   class:list={[
-    'inline-flex items-center gap-1 rounded-full border border-zinc-200 bg-zinc-50 font-medium text-zinc-700 transition-colors hover:border-accent hover:bg-accent/10 dark:border-zinc-800 dark:bg-zinc-900 dark:text-zinc-300',
+    'inline-flex items-center gap-1 rounded-full border border-accent/30 bg-accent/10 font-medium text-zinc-700 transition-colors hover:border-accent hover:bg-accent/20 dark:text-accent-soft',
     size === 'sm' ? 'px-2 py-0.5 text-xs' : 'px-3 py-1 text-sm',
   ]}
 >
   #{tag}
-  {count !== undefined && <span class="text-zinc-400">{count}</span>}
+  {count !== undefined && <span class="text-zinc-500 dark:text-accent-soft/60">{count}</span>}
 </a>
