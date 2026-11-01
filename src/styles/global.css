@@ -15,9 +15,6 @@
   /* Project card surface and the image well behind covers. */
   --color-card: rgb(146 176 247);
   --color-card-well: rgb(128 158 230);
-  /* Project card surface and the image well behind covers. */
-  --color-card: rgb(178 178 178);
-  --color-card-well: rgb(160 160 160);
   --font-sans: "Inter Variable", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   --font-mono: ui-monospace, "Cascadia Code", "JetBrains Mono", Menlo, Consolas, monospace;
 }
