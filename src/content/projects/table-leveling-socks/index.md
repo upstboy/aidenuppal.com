@@ -17,7 +17,7 @@ The Little Giant table I bought would rock on my uneven garage floor, and using 
 
 ## In action
 
-<video autoplay loop muted playsinline preload="metadata" poster="/videos/table-leveling-socks-poster.jpg" class="w-full rounded-xl border border-zinc-200 dark:border-zinc-800" aria-label="Sliding a leveling spacer into the sock on a table leg">
+<video autoplay loop muted playsinline preload="metadata" poster="/videos/table-leveling-socks-poster.jpg" class="mx-auto w-full max-w-xl rounded-xl border border-zinc-200 dark:border-zinc-800" aria-label="CAD animation of the sock and leveling spacer assembling onto the table leg">
   <source src="/videos/table-leveling-socks.mp4" type="video/mp4" />
 </video>
 
