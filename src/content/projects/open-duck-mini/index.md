@@ -15,32 +15,31 @@ featured: true
 
 ## Overview
 
-The Open Duck Mini is a miniature BDX Droid. I chose to build one to learn
+The Open Duck Mini is a miniature BDX Droid. I built one to learn more about the electronics in a robot along with the software that allows it to walk.     
 
 ## Hardware
 
 - **Compute:** Raspberry Pi Zero 2 W
-- **Actuators:** TODO servo model and count
-- **Power:** TODO battery and regulator
-- **Frame:** TODO printed parts, material, print settings worth noting
+- **Actuators:** 14 Feetech STS3215 Servos
+- **Power:** 18650 cells
+- **Frame:** 3D Printed Frame
 
 A photo or two of the assembled robot goes well here. Drop images next to this file and reference them as `![alt text](./photo.jpg)`.
 
 ## Software
 
-What runs on the Pi, how the control loop works, and anything you changed from the upstream project. Code blocks render with syntax highlighting:
+Ran a pretrained walking policy through tnkr.ai
 
-```python
+#```python
 # TODO: a short, interesting snippet from the project
-def step(state):
+#def step(state):
     return policy(state)
 ```
 
 ## Status
 
-Where the build is right now, and what the last milestone was.
+Got the robot walking, next step is to learn some mujoco and train it to do a different movement. 
 
 ## What's next
 
-- TODO: next milestone
-- TODO: open problem you want to solve
+- TODO: Learn basic mujoco
