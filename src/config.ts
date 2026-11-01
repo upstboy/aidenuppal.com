@@ -21,9 +21,8 @@ export const SITE = {
     youtube: '',
   },
 
-  // How many items the home page shows.
+  // How many posts the home page lists. Projects all appear in the carousel.
   home: {
-    featuredProjects: 3,
     recentPosts: 5,
   },
 };
